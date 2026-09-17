@@ -36,4 +36,4 @@ class Calculator:
         """
         divides the first number with the second number.
         """
-        return a / b
+        return a / int(b)
