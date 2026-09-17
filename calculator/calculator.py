@@ -36,4 +36,6 @@ class Calculator:
         """
         divides the first number with the second number.
         """
-        return a / int(b)
+        if b == 0:
+            raise ValueError("Cannot divide by zero.")
+        return a / b
