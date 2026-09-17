@@ -24,7 +24,7 @@ class Calculator:
         :param b: The second number (subtrahend).
         :return: The difference between a and b.
         """
-        return a - int(b)
+        return a - b
 
     def multiply(self, a: float, b: float) -> float:
         """

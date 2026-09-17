@@ -12,11 +12,6 @@ def calculator():
 # --- Standard Assertions ---
 
 
-def test_subtract(calculator):
-    assert calculator.subtract(10, 5) == 5
-    assert calculator.subtract(-1, -1) == 0
-
-
 def test_multiply(calculator):
     assert calculator.multiply(3, 4) == 12
     assert calculator.multiply(-1, 5) == -5
@@ -48,3 +43,14 @@ def test_divide_by_zero(calculator):
 def test_add(calculator, a, b, expected):
     """Testing addition using parametrization to run multiple data sets."""
     assert calculator.add(a, b) == expected
+
+
+@pytest.mark.parametrize("a, b, expected", [
+    (5, 5, 0),
+    (-1, 1, -2),
+    (1, -2, 3),
+    (4.0, 1.5, 2.5)
+])
+def test_subtract(calculator, a, b, expected):
+    """Testing subtract using parametrization to run multiple data sets."""
+    assert calculator.subtract(a, b) == expected
