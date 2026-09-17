@@ -24,4 +24,4 @@ class Calculator:
         :param b: The second number (subtrahend).
         :return: The difference between a and b.
         """
-        return a - b
+        return a - int(b)
