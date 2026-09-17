@@ -26,7 +26,7 @@ class TestCalculator(unittest.TestCase):
         """Test subtraction resulting in zero."""
         self.assertEqual(self.calc.subtract(5, 5), 0)
 
-    def test_multiply_postive(self):
+    def test_multiply_positive(self):
         """Test multiplication of two positive numbers."""
         self.assertEqual(self.calc.multiply(5, 5), 25)
 
@@ -36,7 +36,21 @@ class TestCalculator(unittest.TestCase):
 
     def test_multiply_onenegative(self):
         """Test multiplication of one positive and one negative numbers."""
-        self.assertEqual(self.calc.multiply(5, -5), -25)
+        (self.assertEqual(self.calc.multiply(5, -5), -25) and
+         self.assertEqual(self.calc.multiply(-5, 5), -25))
+
+    def test_divide_positive(self):
+        """Test division of two positive numbers."""
+        self.assertEqual(self.calc.divide(5, 5), 1)
+
+    def test_divide_negative(self):
+        """Test multiplication of two negative numbers."""
+        self.assertEqual(self.calc.divide(-5, -5), 1)
+
+    def test_divide_onenegative(self):
+        """Test multiplication of one positive and one negative numbers."""
+        (self.assertEqual(self.calc.divide(5, -5), -1) and
+            self.assertEqual(self.calc.divide(-5, 5), -1))
 
 
 if __name__ == '__main__':
