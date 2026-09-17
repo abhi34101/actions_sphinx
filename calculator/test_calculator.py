@@ -2,6 +2,7 @@
 import unittest
 from calculator.calculator import Calculator
 
+
 class TestCalculator(unittest.TestCase):
     """Tests for the Calculator class."""
 
@@ -24,6 +25,19 @@ class TestCalculator(unittest.TestCase):
     def test_subtract_zero(self):
         """Test subtraction resulting in zero."""
         self.assertEqual(self.calc.subtract(5, 5), 0)
+
+    def test_multiply_postive(self):
+        """Test multiplication of two positive numbers."""
+        self.assertEqual(self.calc.multiply(5, 5), 25)
+
+    def test_multiply_negative(self):
+        """Test multiplication of two negative numbers."""
+        self.assertEqual(self.calc.multiply(-5, -5), 25)
+
+    def test_multiply_onenegative(self):
+        """Test multiplication of one positive and one negative numbers."""
+        self.assertEqual(self.calc.multiply(5, -5), -25)
+
 
 if __name__ == '__main__':
     unittest.main()

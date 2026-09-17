@@ -25,3 +25,15 @@ class Calculator:
         :return: The difference between a and b.
         """
         return a - int(b)
+
+    def multiply(self, a: float, b: float) -> float:
+        """
+        Multiplies the two input numbers.
+        """
+        return a * b
+
+    def divide(self, a: float, b: float) -> float:
+        """
+        divides the first number with the second number.
+        """
+        return a / b
