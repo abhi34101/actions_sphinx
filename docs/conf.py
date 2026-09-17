@@ -24,14 +24,13 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.coverage',
-    'sphinx.ext.napoleon', # Supports numpy and google style docstrings
+    'sphinx.ext.napoleon',   # Supports numpy and google style docstrings
     'sphinx_rtd_theme',    # Required for the Read the Docs theme
-    'sphinx_autodoc_typehints' # Uses Python type hints in the docs
+    'sphinx_autodoc_typehints'   # Uses Python type hints in the docs
 ]
 
 templates_path = ['_templates']
 exclude_patterns = []
-
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -39,3 +38,5 @@ exclude_patterns = []
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+autoapi_dirs = ["../calculator"]
